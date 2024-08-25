@@ -1,0 +1,212 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+:root{
+    --colorfondo: #E8E8E8;
+    --colorblue: #0A3871;
+    --colorbotonclaro: #D8DFE8;
+    --colorbotonazul: #0A3871;
+
+
+    --fuente-Inter: "Inter", sans-serif;
+}
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background-color:var(--colorfondo);
+    font-family: var(--fuente-Inter);
+}
+
+main{
+    display: flex;
+    justify-content: space-around;
+}
+
+header{
+    width: 60%;
+    margin:3rem;
+
+}
+
+.parte1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 85dvh;
+}
+
+.cajatexto{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 577px;
+    border-color: var(--colorfondo);
+    height: 54dvh;
+    outline: none;
+    background-color: var(--colorfondo);
+    font-size: 3.2rem; 
+    font-family: var(--fuente-Inter);
+    color: var(--colorblue);
+    margin-bottom: 3rem;
+    overflow: auto;
+}
+
+::placeholder{
+      color: var(--colorblue);
+}
+
+.alert{
+    margin-bottom: 0.2rem;
+}
+
+.botones{
+    display: flex;
+    justify-content: space-between;
+    gap:2rem;
+    flex-wrap: wrap;
+}
+
+.encriptar{
+    background-color: var(--colorbotonazul);
+    color: white;
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    width: 328px; 
+    height: 67px;
+    border-radius: 24px;
+    border: 1px solid var(--colorbotonazul);
+}
+.encriptar:hover{
+    padding: 3%;
+    cursor: pointer;
+    border: 2px solid #0000FF;
+}
+.desencriptar{
+    background-color: var(--colorbotonclaro);
+    color: var(--colorblue);
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    width: 328px; 
+    height: 67px;
+    border-radius: 24px;
+    border: 1px solid var(--colorbotonazul);
+}
+.desencriptar:hover{
+    padding: 3%;
+    cursor: pointer;
+    border: 2px solid #0000FF;
+}
+
+.parte2{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.6rem;
+    height: 94dvh;
+    border-radius: 32px;
+    max-width:40rem;
+    width: 100%;
+}
+
+.muneco{
+    width: 32.6rem;
+    height:28.4rem;
+    display: block;
+    gap: 1.6em;
+}
+
+.parrafo{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.6rem
+}
+.titulo{
+    font-size: 2.4rem;
+}
+
+.texto{
+    font-size: 1.6rem;
+}
+
+.copiar{
+    background-color: white;
+    color: var(--colorblue);
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    width: 328px; 
+    height: 67px;
+    border-radius: 24px;
+    border: 1px solid var(--colorbotonazul);
+}
+
+.copiar:hover{
+    padding: 3%;
+    cursor: pointer;
+    border: 2px solid #0000FF;
+}
+
+.piedepagina{
+    padding: 24px;
+    font-family: var(--fuente-Inter);
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    color: var(--colorblue);
+}
+
+.hidden{
+    display: none;
+}
+
+@media screen and (max-width:768px) {
+    main{
+        flex-direction: column;
+        margin: auto;
+    }
+    .botones{
+        flex-direction: column;
+        align-items: center;
+    }
+    .muneco{
+        display:none;
+    } 
+    .parte2{
+        height: auto;
+        max-width: 624px;
+        margin-top: 2rem;
+        min-height: 186px;
+    }
+    .logo{
+        width: 73px;
+    }
+       
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+    width: 60px;
+    aspect-ratio: 4;
+    --_g: no-repeat radial-gradient(circle closest-side,#000 90%,#0000);
+    background: 
+      var(--_g) 0%   50%,
+      var(--_g) 50%  50%,
+      var(--_g) 100% 50%;
+    background-size: calc(100%/3) 100%;
+    animation: l7 1s infinite linear;
+  }
+  @keyframes l7 {
+      33%{background-size:calc(100%/3) 0%  ,calc(100%/3) 100%,calc(100%/3) 100%}
+      50%{background-size:calc(100%/3) 100%,calc(100%/3) 0%  ,calc(100%/3) 100%}
+      66%{background-size:calc(100%/3) 100%,calc(100%/3) 100%,calc(100%/3) 0%  }
+  }
