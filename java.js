@@ -2,6 +2,7 @@ const d = document;
 const txtEncriptar = d.querySelector(".cajatexto");
 const IMGmuneco = d.querySelector(".muneco");
 const imgloader = d.querySelector(".loader");
+const Imgojos = d.querySelector(".ojos");
 const resultado = d.querySelector(".titulo");
 const parrafo = d.querySelector(".texto")
 const btnencriptar = d.querySelector(".encriptar");
@@ -58,6 +59,7 @@ btnencriptar.addEventListener("click", e=>{
     parrafo.textContent = mensajeEncriptado; 
     btncopiar.classList.remove("hidden");
     resultado.textContent = "Mensaje Encontrado"
+    imgloader.classList.add("hidden");
 });
 
 btndesencriptar[1].addEventListener("click", e=>{
@@ -66,7 +68,8 @@ btndesencriptar[1].addEventListener("click", e=>{
     let mensajeDesencriptado = desencriptarMensaje(mensaje);
     parrafo.textContent = mensajeDesencriptado; 
     btncopiar.classList.remove("hidden");
-    resultado.textContent = "Mensaje Encontrado"
+    resultado.textContent = "Mensaje Encontrado";
+    imgloader.classList.add("hidden");
 });
 
 
@@ -77,6 +80,6 @@ btncopiar.addEventListener('click', ()=>{
        imgloader.classList.add("hidden");
        resultado.textContent = "El mensaje fue copiado";
        btncopiar.classList.add("hidden");
-       parrafo.textContent = ""; 
+       parrafo.textContent = "";  
     })
 })
